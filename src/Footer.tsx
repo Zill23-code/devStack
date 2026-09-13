@@ -1,4 +1,4 @@
-import React from 'react';
+
 import Logo from './B14-A05-DevStack/assets/logo-text.png'
 const Footer = () => {
     return ( <footer className="w-full bg-[#FFFFFF] mt-24 py-12 border-t border-slate-200">

@@ -1,4 +1,4 @@
-import React, { useState, Suspense } from 'react';
+import { useState, Suspense } from 'react';
 import Nav from './Components/Nav';
 import Banner from './Components/Banner';
 import TechCards from './Components/TechCards';

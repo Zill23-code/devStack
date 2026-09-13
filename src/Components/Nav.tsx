@@ -1,4 +1,3 @@
-import React from 'react';
 import Logo from '../B14-A05-DevStack/assets/logo-text.png'
 
 const Nav = () => {
@@ -17,9 +16,6 @@ const Nav = () => {
        <button className='h-15 w-25 bg-fuchsia-600 text-white p-4 rounded-[99px] border-2'>Sign Up</button>
        </div>
     </nav>
-
-
-
 };
 
 export default Nav;

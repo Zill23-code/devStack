@@ -1,4 +1,3 @@
-import React from 'react';
 import Image from '../B14-A05-DevStack/assets/banner-stack.png'
 
 const Banner = () => {

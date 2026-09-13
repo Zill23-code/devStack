@@ -1,17 +1,28 @@
-import React, { use, type Dispatch, type SetStateAction } from 'react';
+import { use, type Dispatch, type SetStateAction } from 'react';
 import { FaStar } from 'react-icons/fa';
 import { toast } from 'react-toastify';
 
+export interface TechItem {
+  id: string | number;
+  name: string;
+  description: string;
+  category: string;
+  difficulty: string;
+  rating: number;
+  icon?: string;
+  badge?: string;
+}
+
 type ItechCardsProps = {
-  dataPromise: Promise<any[]>;
-  techCard: any[];
-  setTechCard: Dispatch<SetStateAction<any[]>>;
+  dataPromise: Promise<TechItem[]>;
+  techCard: TechItem[];
+  setTechCard: Dispatch<SetStateAction<TechItem[]>>;
 };
 
 export const TechCards = ({ dataPromise, techCard, setTechCard }: ItechCardsProps) => {
   const data = use(dataPromise);
 
-  const handleAddToStack = (selectedCard: any) => {
+  const handleAddToStack = (selectedCard: TechItem) => {
     const filteredCard = techCard.filter((card) => card.id === selectedCard.id);
     if (filteredCard.length === 0) {
       setTechCard([...techCard, selectedCard]);
@@ -33,7 +44,7 @@ export const TechCards = ({ dataPromise, techCard, setTechCard }: ItechCardsProp
       
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 ">
-        {data.map((card) => {
+        {data.map((card: TechItem) => {
           const isSelected = techCard.filter((item) => item.id === card.id).length > 0;
 
           return (
@@ -70,7 +81,7 @@ export const TechCards = ({ dataPromise, techCard, setTechCard }: ItechCardsProp
                   <h2>{card.category}</h2>
                   <h2>{card.difficulty}</h2>
                   <h2 className="flex items-center gap-1 font-semibold text-gray-700">
-                    <FaStar className="text-amber-400" />
+                  <FaStar color="#f59e0b" />
                     {card.rating}
                   </h2>
                 </div>
