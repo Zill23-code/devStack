@@ -21,21 +21,25 @@ export const TechCards = ({ dataPromise, techCard, setTechCard }: ItechCardsProp
 
   return (
     <section>
+      <div className=' mb-10'>
       <h2 className="font-extrabold text-3xl tracking-tight text-gray-900 mb-6">
-        Explore the{' '}
+        Explore the {}
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF5722] via-[#D81B7E] to-[#7C3AED]">
           Technologies
         </span>
       </h2>
+      <p className='text-[#64748B ]'>Pick one technology per category to build your ideal stack.</p>
+      </div>
+      
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 ">
         {data.map((card) => {
           const isSelected = techCard.filter((item) => item.id === card.id).length > 0;
 
           return (
             <div
               key={card.id || card.name}
-              className="group relative bg-white border border-gray-100 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between overflow-hidden"
+              className="group relative bg-white border border-gray-100 rounded-2xl p-6 shadow-sm hover:shadow-xl  flex flex-col justify-between overflow-hidden"
             >
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#FF5722] via-[#D81B7E] to-[#7C3AED] opacity-0 group-hover:opacity-100 transition-opacity" />
 
@@ -47,7 +51,7 @@ export const TechCards = ({ dataPromise, techCard, setTechCard }: ItechCardsProp
                     )}
                   </div>
 
-                  <span className="text-[10px] font-bold px-2.5 py-0.5 rounded-full text-white bg-gradient-to-r from-[#FF5722] via-[#D81B7E] to-[#7C3AED]">
+                  <span className="text-[10px] font-bold px-2.5 py-0.5 rounded-full text-[#0EA5E9] bg-[#F0F9FF] rounded-4xl">
                     {card.badge || 'Popular'}
                   </span>
                 </div>

@@ -23,11 +23,11 @@ function App() {
       <Banner />
       <Suspense fallback={<div className="text-center py-12 text-gray-500 font-medium">Loading catalog...</div>}>
         <div className="container mx-auto px-4 max-w-7xl grid grid-cols-1 lg:grid-cols-3 gap-8 mt-12 items-start">
-          {/* Catalog takes 2 columns */}
+         
           <div className="lg:col-span-2">
             <TechCards dataPromise={dataPromise} techCard={techCard} setTechCard={setTechCard} />
           </div>
-          {/* Stack sidebar takes 1 column */}
+        
           <div className="lg:col-span-1 lg:sticky lg:top-24">
             <StackCard techCard={techCard} setTechCard={setTechCard} />
           </div>

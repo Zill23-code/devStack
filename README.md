@@ -1,32 +1,40 @@
-# React + TypeScript + Vite
+# Project Name: devStack
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A simple webpage that displays various technology names with interactive functionality.
 
-Currently, two official plugins are available:
+## Technologies Used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- HTML
+- Tailwind CSS
+- React
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. **Responsive Design:** Optimized layout for all screen sizes and devices.
+2. **Eco-Friendly:** Lightweight performance optimized for modern hardware.
+3. **Modern Tech Stack:** Built with contemporary front-end tools and best practices.
 
-## Expanding the Oxlint configuration
+---
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+## React Concepts & Q&A
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
+1. **What is JSX?**
+   JSX is a syntax extension for JavaScript used in React to write HTML-like structures directly inside component files.
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+2. **Difference between Props and State:**
+   Props pass read-only data into a component from the outside, while state manages dynamic data locally inside the component.
+
+3. **What does `useState` do?**
+   The `useState` hook stores and updates dynamic data locally within a component, triggering a re-render when state changes.
+
+4. **What does `useEffect` do?**
+   The `useEffect` hook handles side effects in functional components (such as fetching external JSON data or setting up subscriptions).
+
+5. **Why are unique `key` props required in lists?**
+   React uses unique keys in `.map()` lists to track individual elements efficiently, updating only the changed items in the real DOM.
+
+6. **What is Conditional Rendering?**
+   Conditional rendering displays different UI elements or components based on specific conditions (such as state values, boolean flags, or available data).
+
+7. **How does data move between components?**
+   Data flow is unidirectional: a parent passes data down to a child component via props, and a child sends data back up to the parent using callback functions.

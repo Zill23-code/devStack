@@ -19,17 +19,17 @@ const StackCard = ({ techCard, setTechCard }: IStackCardProps) => {
   return (
     <div className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
       
-      <div className="flex items-center justify-between mb-4 border-b border-gray-100 pb-3">
-        <h2 className="text-xl font-bold text-gray-900">Your Stack</h2>
+      <div className=" items-center justify-between mb-4 border-b border-gray-100 pb-3">
+        <h2 className="text-xl font-normal text-gray-900">Your Stack</h2>
         <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-gray-100 text-gray-600">
-          {techCard.length} Items
+          {techCard.length} Technology Selected
         </span>
       </div>
 
      
       {techCard.length === 0 ? (
         <div className="py-8 text-center text-gray-400 text-xs border border-dashed border-gray-200 rounded-xl">
-          No technologies added yet.
+          Your Technology Is empty.
         </div>
       ) : (
         <>
@@ -44,7 +44,7 @@ const StackCard = ({ techCard, setTechCard }: IStackCardProps) => {
                     <img src={iCard.icon} alt={iCard.name} className="w-6 h-6 object-contain" />
                   ) : (
                     <div className="w-6 h-6 rounded bg-pink-100 text-[#D81B7E] font-bold text-[10px] flex items-center justify-center">
-                      {iCard.name ? iCard.name.charAt(0) : 'T'}
+                      {iCard.name }
                     </div>
                   )}
                   <div>
